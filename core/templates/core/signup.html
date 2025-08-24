@@ -1,0 +1,17 @@
+{% extends "core/base.html" %}
+
+{% block title %}Sign Up - The Loop{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>Create Your Account</h2>
+    <form method="post" novalidate>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+    <p class="form-link">
+        Already have an account? <a href="#">Log In</a>
+    </p>
+</div>
+{% endblock %}

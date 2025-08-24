@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+The LOop
+
+{% endblock %}
+
+{% block content %}
+
+<h2> 
+    {% if form.instance.pk %} 
+    Edit Tweet 
+    {% else %} 
+    Create tweet 
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data" class="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button class="btn btn-warning" type="submit">Tweet</button>
+        <a href="{% url "tweet_list" %}" > Back to Tweet List</a>
+        
+            
+    </form>
+</h2>
+
+
+{% endblock %}

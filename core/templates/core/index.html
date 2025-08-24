@@ -1,0 +1,33 @@
+{% extends "core/base.html" %}
+
+{% block title %}The Loop - Home{% endblock %}
+
+{% block content %}
+    <header class="hero">
+        <div class="hero-container">
+            <h1>Join the Conversation. Instantly.</h1>
+            <p>LOop is a fast, simple way to share what's on your mind and connect with communities. </p>
+            <a href="{% url 'signup' %}" class="btn btn-primary btn-large">Create Your Account</a>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="container">
+            <h2>Why Use The Loop?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>Create & Share</h3>
+                    <p>Post your thoughts, updates, and ideas in seconds with a clean and simple editor.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Build Your Feed</h3>
+                    <p>Follow interesting people to create a personalized timeline that matters to you.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Engage with Others</h3>
+                    <p>Like, reply, and share posts to join discussions and build your community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
